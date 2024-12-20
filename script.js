@@ -1,51 +1,45 @@
-let myPizza = [
-    {
-    "name": "Pizza Margherita",
-    "price": 14.00,
-    "description": "Tomaten Mozzarella"
-},
-{
-    "name": "Pizza Diavola",
-    "price": 15.00,
-    "description": "Tomaten Mozzarella"
-},
-{
-    "name": "Pizza Tirolese",
-    "price": 16.00,
-    "description": "Tomaten Mozzarella"
+// Warenkorb hinzufügen
+// Warenkorb entfernen 
+// Warenkorb löschen
+// Anzahl hinzugefügt
+// Gesammtpreis anzeigen
+
+let basket = []; 
+
+function init(){
+renderPizza();
+renderPasta();
 }
-]
 
-let myPasta = [
-    {
-    "name": "Pasta Carbonara",
-    "price": 14.00,
-    "description": "Tomaten Mozzarella"
-},
-{
-    "name": "Pasta",
-    "price": 15.00,
-    "description": "Tomaten Mozzarella"
-},
-{
-    "name": "Pasta",
-    "price": 16.00,
-    "description": "Tomaten Mozzarella"
+
+function renderPizza(){
+    let content = document.getElementById("menu");
+    content.innerHTML += `<h2>Pizza</h2><img src="./assets/img/Gemini_Generated_Image_orbrkrorbrkrorbr.jpeg" alt="">`;
+    for (let i = 0; i < myPizza.length; i++) {
+        content.innerHTML += `<h3>${myPizza[i].name}</h3><p>${myPizza[i].description}</p>
+        <p>CHF ${myPizza[i].price.toFixed(2)}</p>
+        <button onclick="addBasket()">Hinzufügen</button>`
+    }
 }
-]
 
-const pizza = document.getElementById("pizzaMenu");
-const pasta = document.getElementById("pastaMenu");
+function renderPasta(){
+    let content = document.getElementById("menu");
+    content.innerHTML += `<h2>Pasta</h2><img src="./assets/img/pasta carbonara.png" alt="">`;
+    for (let i = 0; i < myPasta.length; i++) {
+        
+        content.innerHTML += `<h3>${myPasta[i].name}</h3><p>${myPasta[i].description}</p>
+        <p>CHF ${myPasta[i].price.toFixed(2)}</p>
+        <button onclick="addBasket()">Hinzufügen</button>`
+    }
+}
 
-myPizza.forEach(dish => {
+function addBasket(){
+    console.log("Hallo");
     
-  const li = document.createElement("li");
-  li.innerHTML = `<h3>${dish.name}</h3><p>${dish.description}</p><p>CHF ${dish.price.toFixed(2)}</p><button onclick="()">Hinzufügen</button>`; 
-  pizza.appendChild(li);
-});
+    let basketList = document.getElementById('basketContent');
 
-myPasta.forEach(dish => {
-    const li = document.createElement("li");
-    li.innerHTML = `<h3>${dish.name}</h3><p>${dish.description}</p><p>CHF ${dish.price.toFixed(2)}</p><button onclick="()">Hinzufügen</button>`; 
-    pasta.appendChild(li);
-  });
+    
+    for (let i = 0; i < myPizza.length; i++) {
+        basketList.push(myPizza[i]);
+    }
+   }

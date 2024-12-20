@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BestellApp</title>
+    <script src="./script/template.js"></script>
+    <script src="./script.js"></script>
 
     <link rel="stylesheet" href="./styles/standard.css">
     <link rel="stylesheet" href="./style.css">
+
 </head>
 
-<body>
+<body onload="init()">
     <div class="header">
         <div class="header_content">
             <img src="./assets/img/Gemini_Generated_Image_orbrkrorbrkrorbr.jpeg" alt="">
@@ -23,33 +26,25 @@
     <div class="content_wrapper">
         <section class="contents">
             <div class="content">
-                <img src="./assets/img/Gemini_Generated_Image_orbrkrorbrkrorbr.jpeg" alt="">
-                
-            
-                <div class="menu">
-                    <h2>Pizza</h2>
+                <div class="menu" id="menu">
                     <ul id="pizzaMenu">
 
                     </ul>
-                    <img src="./assets/img/pasta carbonara.png" alt="">
-                    <h2>Pasta</h2>
-
                     <ul id="pastaMenu">
 
                     </ul>
-                    
                 </div>
-            
+
         </section>
         <section class="basket_wrapper">
             <div class="basket_content">
                 <h2>Warenkorb</h2>
+                <ul id="basketContent"></ul>
             </div>
         </section>
     </div>
     <footer></footer>
-    <script src="./script/template.js"></script>
-    <script src="./script.js"></script>
+
 </body>
 
 </html>

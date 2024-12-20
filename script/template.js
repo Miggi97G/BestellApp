@@ -37,15 +37,14 @@ let myPasta = [
 const pizza = document.getElementById("pizzaMenu");
 const pasta = document.getElementById("pastaMenu");
 
-myPizza.forEach(dish => {
-    
-  const li = document.createElement("li");
-  li.innerHTML = `<h3>${dish.name}</h3><p>${dish.description}</p><p>CHF ${dish.price.toFixed(2)}</p><button onclick="()">Hinzufügen</button>`; 
-  pizza.appendChild(li);
-});
+//myPizza.forEach(dish => {
+//  const li = document.createElement("li");
+//  li.innerHTML = `<h3>${dish.name}</h3><p>${dish.description}</p><p>CHF ${dish.price.toFixed(2)}</p><button onclick="(addBasket)">Hinzufügen</button>`; 
+//  pizza.appendChild(li);
+//});
 
-myPasta.forEach(dish => {
-    const li = document.createElement("li");
-    li.innerHTML = `<h3>${dish.name}</h3><p>${dish.description}</p><p>CHF ${dish.price.toFixed(2)}</p><button onclick="()">Hinzufügen</button>`; 
-    pasta.appendChild(li);
-  });
+//myPasta.forEach(dish => {
+//    const li = document.createElement("li");
+//    li.innerHTML = `<h3>${dish.name}</h3><p>${dish.description}</p><p>CHF ${dish.price.toFixed(2)}</p><button onclick="(addBasket)">Hinzufügen</button>`; 
+//    pasta.appendChild(li);
+//  });
