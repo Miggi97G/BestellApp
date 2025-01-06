@@ -7,7 +7,7 @@ let myPizza = [
 {
     "name": "Pizza Diavola",
     "price": 15.00,
-    "description": "Tomaten Mozzarella"
+    "description": "Tomaten Mozzarella, scharfe Salami"
 },
 {
     "name": "Pizza Tirolese",
